@@ -35,14 +35,23 @@ export default function HomeScreen() {
         borderColor: "gray",
         padding: 10,
         marginTop: 20,
-        fontSize: 24,
+        fontSize: 20,
       }}
       />     
 
-      <Pressable>
-        <Text>
-          Press me
-        </Text>
+      <Pressable onPress={() => alert("button pressed")}
+        style={
+          (pressed) => ({
+            backgroundColor: pressed ? "red" : "grey",
+          })
+        }
+        hitSlop={{
+          top: 20,
+          bottom: 60,
+        }}
+        >
+        {({pressed}) => 
+          pressed ? <Text> Press me</Text> : <Text> Pressed me </Text>}
       </Pressable>
     
     </View>
