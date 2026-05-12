@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, Pressable } from 'react-native'
+import { StyleSheet, Text, View, KeyboardAvoidingView, TextInput, Pressable, Platform } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const HomeScreen = () => {
   return (
-    <KeyboardAvoidingView style={{
+    <SafeAreaView style={{flex: 1}}>
+      <KeyboardAvoidingView style={{
       flex: 1
-    }}>
+    }}
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    >
       <View
       style={{
         flex: 1, justifyContent: 'flex-end', padding: 24
@@ -53,6 +57,7 @@ const HomeScreen = () => {
         </Pressable>
       </View>
     </KeyboardAvoidingView>
+    </SafeAreaView>
   )
 }
 
