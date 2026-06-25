@@ -1,6 +1,6 @@
 import HomeScreen from "../../screens/HomeScreen";
 import DetailScreen from "../../screens/DetailScreen";
-import Profile from "../../screens/ProfileScreen";
+import ProfileScreen from "../../screens/ProfileScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createStaticNavigation } from "@react-navigation/native";
 
@@ -9,8 +9,8 @@ const Stack = createNativeStackNavigator({
   screens:{
     Home:HomeScreen,
     Details: DetailScreen,
-    Profile: Profile
-
+    Profile: ProfileScreen
+ 
   }
 })
 

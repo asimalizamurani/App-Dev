@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Button } from '@react-navigation/elements'
 
-const Profile = () => {
+const ProfileScreen = () => {
     const navigation = useNavigation<any>()
   return (
     <View>
@@ -14,6 +14,6 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default ProfileScreen
 
 const styles = StyleSheet.create({})
